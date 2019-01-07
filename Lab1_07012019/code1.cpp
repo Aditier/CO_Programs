@@ -26,7 +26,7 @@ int main()
     for(int i=0; i<3; i++)
     {
         cin>>k;
-        b1.push(i);
+        b1.push(k);
         count1++;
     }
     binary(b1);
@@ -39,13 +39,21 @@ void display(stack<int>a)
         a.pop();
     }
 }
-void binary(stack<int>)
+void binary(stack<int>b)
 {
-    int j, sum, dec;
+    int j, sum=0, dec;
     for(int i=count1; i>0; i--)
     {
-        dec=2^(i);
-        sum=sum+dec;
+        if(b.top()==1)
+        {
+            dec=2^(i);
+            sum=sum+dec;
+        }
+        if(b.top()==0)
+        {
+            sum=sum+0;
+        }
+        b.top()=b.top()-1;
     }
     cout<<"The decimal is "<<sum;
 }
