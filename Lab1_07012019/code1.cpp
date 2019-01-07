@@ -3,7 +3,7 @@
 #include<algorithm>
 #include<stack>
 using namespace std;
-int i, count1;
+int i, count1, k;
 void display(stack<int>);
 void binary(stack<int>);
 int main()
@@ -22,9 +22,10 @@ int main()
     }
     display(a1);
     stack<int>b1;
-    cout<<"Enter the binary number:\t";
-    for(int i=0; i<10; i++)
+    cout<<"\nEnter the binary number:\t";
+    for(int i=0; i<3; i++)
     {
+        cin>>k;
         b1.push(i);
         count1++;
     }
@@ -40,10 +41,11 @@ void display(stack<int>a)
 }
 void binary(stack<int>)
 {
-for(count1=j; count1>0; count--)
-{
-dec=i*2^(j)
-sum=sum+dec;
-}
-cout<<"The decimal is "<<sum;
+    int j, sum, dec;
+    for(int i=count1; i>0; i--)
+    {
+        dec=2^(i);
+        sum=sum+dec;
+    }
+    cout<<"The decimal is "<<sum;
 }
