@@ -41,7 +41,7 @@ void display(stack<int>a)
 }
 void binary(stack<int>b)
 {
-    int j, sum=0, dec;
+    int j, sum, dec;
     for(int i=count1; i>0; i--)
     {
         if(b.top()==1)
